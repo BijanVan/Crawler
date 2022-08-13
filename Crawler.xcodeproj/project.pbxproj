@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDA49CD428A4059C00EFF598 /* CrawlerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA49CD328A4059C00EFF598 /* CrawlerApp.swift */; };
+		CDA49CD628A4059C00EFF598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA49CD528A4059C00EFF598 /* ContentView.swift */; };
+		CDA49CD828A4059E00EFF598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA49CD728A4059E00EFF598 /* Assets.xcassets */; };
+		CDA49CDB28A4059E00EFF598 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA49CDA28A4059E00EFF598 /* Preview Assets.xcassets */; };
+		CDA49CE628A4059E00EFF598 /* CrawlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA49CE528A4059E00EFF598 /* CrawlerTests.swift */; };
+		CDA49CF028A4059E00EFF598 /* CrawlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA49CEF28A4059E00EFF598 /* CrawlerUITests.swift */; };
+		CDA49CF228A4059E00EFF598 /* CrawlerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA49CF128A4059E00EFF598 /* CrawlerUITestsLaunchTests.swift */; };
+		CDA49D1528A41FE700EFF598 /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA49D1428A41FE700EFF598 /* Crawler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDA49CE228A4059E00EFF598 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA49CC828A4059C00EFF598 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA49CCF28A4059C00EFF598;
+			remoteInfo = Crawler;
+		};
+		CDA49CEC28A4059E00EFF598 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA49CC828A4059C00EFF598 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA49CCF28A4059C00EFF598;
+			remoteInfo = Crawler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CDA49CD028A4059C00EFF598 /* Crawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crawler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA49CD328A4059C00EFF598 /* CrawlerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerApp.swift; sourceTree = "<group>"; };
+		CDA49CD528A4059C00EFF598 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CDA49CD728A4059E00EFF598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDA49CDA28A4059E00EFF598 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDA49CDC28A4059E00EFF598 /* Crawler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crawler.entitlements; sourceTree = "<group>"; };
+		CDA49CE128A4059E00EFF598 /* CrawlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrawlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA49CE528A4059E00EFF598 /* CrawlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerTests.swift; sourceTree = "<group>"; };
+		CDA49CEB28A4059E00EFF598 /* CrawlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrawlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA49CEF28A4059E00EFF598 /* CrawlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerUITests.swift; sourceTree = "<group>"; };
+		CDA49CF128A4059E00EFF598 /* CrawlerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CDA49D1428A41FE700EFF598 /* Crawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDA49CCD28A4059C00EFF598 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA49CDE28A4059E00EFF598 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA49CE828A4059E00EFF598 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDA49CC728A4059C00EFF598 = {
+			isa = PBXGroup;
+			children = (
+				CDA49CD228A4059C00EFF598 /* Crawler */,
+				CDA49CE428A4059E00EFF598 /* CrawlerTests */,
+				CDA49CEE28A4059E00EFF598 /* CrawlerUITests */,
+				CDA49CD128A4059C00EFF598 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDA49CD128A4059C00EFF598 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDA49CD028A4059C00EFF598 /* Crawler.app */,
+				CDA49CE128A4059E00EFF598 /* CrawlerTests.xctest */,
+				CDA49CEB28A4059E00EFF598 /* CrawlerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDA49CD228A4059C00EFF598 /* Crawler */ = {
+			isa = PBXGroup;
+			children = (
+				CDA49CD328A4059C00EFF598 /* CrawlerApp.swift */,
+				CDA49CD528A4059C00EFF598 /* ContentView.swift */,
+				CDA49CD728A4059E00EFF598 /* Assets.xcassets */,
+				CDA49CDC28A4059E00EFF598 /* Crawler.entitlements */,
+				CDA49CD928A4059E00EFF598 /* Preview Content */,
+				CDA49D1428A41FE700EFF598 /* Crawler.swift */,
+			);
+			path = Crawler;
+			sourceTree = "<group>";
+		};
+		CDA49CD928A4059E00EFF598 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CDA49CDA28A4059E00EFF598 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDA49CE428A4059E00EFF598 /* CrawlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA49CE528A4059E00EFF598 /* CrawlerTests.swift */,
+			);
+			path = CrawlerTests;
+			sourceTree = "<group>";
+		};
+		CDA49CEE28A4059E00EFF598 /* CrawlerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA49CEF28A4059E00EFF598 /* CrawlerUITests.swift */,
+				CDA49CF128A4059E00EFF598 /* CrawlerUITestsLaunchTests.swift */,
+			);
+			path = CrawlerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDA49CCF28A4059C00EFF598 /* Crawler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA49CF528A4059E00EFF598 /* Build configuration list for PBXNativeTarget "Crawler" */;
+			buildPhases = (
+				CDA49CCC28A4059C00EFF598 /* Sources */,
+				CDA49CCD28A4059C00EFF598 /* Frameworks */,
+				CDA49CCE28A4059C00EFF598 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crawler;
+			productName = Crawler;
+			productReference = CDA49CD028A4059C00EFF598 /* Crawler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDA49CE028A4059E00EFF598 /* CrawlerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA49CF828A4059E00EFF598 /* Build configuration list for PBXNativeTarget "CrawlerTests" */;
+			buildPhases = (
+				CDA49CDD28A4059E00EFF598 /* Sources */,
+				CDA49CDE28A4059E00EFF598 /* Frameworks */,
+				CDA49CDF28A4059E00EFF598 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA49CE328A4059E00EFF598 /* PBXTargetDependency */,
+			);
+			name = CrawlerTests;
+			productName = CrawlerTests;
+			productReference = CDA49CE128A4059E00EFF598 /* CrawlerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDA49CEA28A4059E00EFF598 /* CrawlerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA49CFB28A4059E00EFF598 /* Build configuration list for PBXNativeTarget "CrawlerUITests" */;
+			buildPhases = (
+				CDA49CE728A4059E00EFF598 /* Sources */,
+				CDA49CE828A4059E00EFF598 /* Frameworks */,
+				CDA49CE928A4059E00EFF598 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA49CED28A4059E00EFF598 /* PBXTargetDependency */,
+			);
+			name = CrawlerUITests;
+			productName = CrawlerUITests;
+			productReference = CDA49CEB28A4059E00EFF598 /* CrawlerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDA49CC828A4059C00EFF598 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					CDA49CCF28A4059C00EFF598 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					CDA49CE028A4059E00EFF598 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = CDA49CCF28A4059C00EFF598;
+					};
+					CDA49CEA28A4059E00EFF598 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = CDA49CCF28A4059C00EFF598;
+					};
+				};
+			};
+			buildConfigurationList = CDA49CCB28A4059C00EFF598 /* Build configuration list for PBXProject "Crawler" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDA49CC728A4059C00EFF598;
+			productRefGroup = CDA49CD128A4059C00EFF598 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDA49CCF28A4059C00EFF598 /* Crawler */,
+				CDA49CE028A4059E00EFF598 /* CrawlerTests */,
+				CDA49CEA28A4059E00EFF598 /* CrawlerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDA49CCE28A4059C00EFF598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA49CDB28A4059E00EFF598 /* Preview Assets.xcassets in Resources */,
+				CDA49CD828A4059E00EFF598 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA49CDF28A4059E00EFF598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA49CE928A4059E00EFF598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDA49CCC28A4059C00EFF598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA49D1528A41FE700EFF598 /* Crawler.swift in Sources */,
+				CDA49CD628A4059C00EFF598 /* ContentView.swift in Sources */,
+				CDA49CD428A4059C00EFF598 /* CrawlerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA49CDD28A4059E00EFF598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA49CE628A4059E00EFF598 /* CrawlerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA49CE728A4059E00EFF598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA49CF028A4059E00EFF598 /* CrawlerUITests.swift in Sources */,
+				CDA49CF228A4059E00EFF598 /* CrawlerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDA49CE328A4059E00EFF598 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA49CCF28A4059C00EFF598 /* Crawler */;
+			targetProxy = CDA49CE228A4059E00EFF598 /* PBXContainerItemProxy */;
+		};
+		CDA49CED28A4059E00EFF598 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA49CCF28A4059C00EFF598 /* Crawler */;
+			targetProxy = CDA49CEC28A4059E00EFF598 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CDA49CF328A4059E00EFF598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDA49CF428A4059E00EFF598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CDA49CF628A4059E00EFF598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Crawler/Crawler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Crawler/Preview Content\"";
+				DEVELOPMENT_TEAM = XA84Z9Z2T7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-concurrency -Xfrontend -enable-actor-data-race-checks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bijansoft.Crawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CDA49CF728A4059E00EFF598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Crawler/Crawler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Crawler/Preview Content\"";
+				DEVELOPMENT_TEAM = XA84Z9Z2T7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-concurrency -Xfrontend -enable-actor-data-race-checks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bijansoft.Crawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CDA49CF928A4059E00EFF598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XA84Z9Z2T7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bijansoft.CrawlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crawler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Crawler";
+			};
+			name = Debug;
+		};
+		CDA49CFA28A4059E00EFF598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XA84Z9Z2T7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bijansoft.CrawlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crawler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Crawler";
+			};
+			name = Release;
+		};
+		CDA49CFC28A4059E00EFF598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XA84Z9Z2T7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bijansoft.CrawlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Crawler;
+			};
+			name = Debug;
+		};
+		CDA49CFD28A4059E00EFF598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XA84Z9Z2T7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bijansoft.CrawlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Crawler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDA49CCB28A4059C00EFF598 /* Build configuration list for PBXProject "Crawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA49CF328A4059E00EFF598 /* Debug */,
+				CDA49CF428A4059E00EFF598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA49CF528A4059E00EFF598 /* Build configuration list for PBXNativeTarget "Crawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA49CF628A4059E00EFF598 /* Debug */,
+				CDA49CF728A4059E00EFF598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA49CF828A4059E00EFF598 /* Build configuration list for PBXNativeTarget "CrawlerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA49CF928A4059E00EFF598 /* Debug */,
+				CDA49CFA28A4059E00EFF598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA49CFB28A4059E00EFF598 /* Build configuration list for PBXNativeTarget "CrawlerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA49CFC28A4059E00EFF598 /* Debug */,
+				CDA49CFD28A4059E00EFF598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDA49CC828A4059C00EFF598 /* Project object */;
+}
