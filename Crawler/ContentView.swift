@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var crawler = Crawler()
+    @State var items: [URL: Page] = [:]
 
     var body: some View {
         List {
-            ForEach(Array(crawler.state.keys), id: \.self) { url in
+            ForEach(Array(items.keys), id: \.self) { url in
                 HStack {
                     Text(url.absoluteString)
-                    Text(crawler.state[url]?.title ?? "")
+                    Text(items[url]?.title ?? "")
                 }
             }
         }
         .overlay {
-            Text("Count: \(crawler.state.count)")
+            Text("Count: \(items.count)")
                 .padding()
                 .background(Color.blue.opacity(0.8))
         }
@@ -28,7 +28,13 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .task {
             do {
-                try await crawler.crawl(url: URL(string: "https://www.swift.org/blog/")!)
+                let start = Date()
+                let results = try await crawl(url: URL(string: "https://www.swift.org/blog/")!)
+                for try await page in results {
+                    self.items[page.url] = page
+                }
+                let end = Date()
+                print("Elapsed: \(end.timeIntervalSince(start))")
             } catch {
                 print(error)
             }

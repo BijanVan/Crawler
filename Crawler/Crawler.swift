@@ -7,7 +7,40 @@
 
 import Foundation
 
-actor Queue {
+private let concurrencyLevel = ProcessInfo.processInfo.activeProcessorCount
+
+func crawl(url: URL) async throws -> AsyncThrowingStream<Page, Error> {
+    return AsyncThrowingStream { cont in
+        Task {
+            let basePrefix = url.absoluteString
+            let queue = Queue()
+            await queue.enqueue(links: [url])
+
+            await withThrowingTaskGroup(of: Void.self) { group in
+                for _ in 0..<concurrencyLevel {
+                    group.addTask {
+                        while let queuedURL = await queue.dequeue() {
+                            let page = try await page(from: queuedURL)
+                            await queue.finished(with: queuedURL)
+                            cont.yield(page)
+                            var links: [URL] = []
+                            for link in page.links {
+                                if await !queue.exists(url: link) && link.absoluteString.hasPrefix(basePrefix) {
+                                    links.append(link)
+                                }
+                            }
+                            await queue.enqueue(links: links)
+                        }
+                    }
+                }
+            }
+            await queue.reset()
+            cont.finish()
+        }
+    }
+}
+
+private actor Queue {
     private var waiting: Set<URL> = []
     private var inProgress: Set<URL> = []
     private var done: Set<URL> = []
@@ -24,8 +57,8 @@ actor Queue {
     func dequeue() async -> URL? {
         guard let url = waiting.popFirst() else {
             if !inProgress.isEmpty {
-                await withCheckedContinuation { continuation in
-                    pending.append(continuation.resume)
+                await withCheckedContinuation { cont in
+                    pending.append(cont.resume)
                 }
                 return await dequeue()
             }
@@ -58,75 +91,35 @@ actor Queue {
     }
 }
 
-@MainActor
-final class Crawler: ObservableObject {
-    @Published var state: [URL: Page] = [:]
-
-    let concurrencyLevel = ProcessInfo.processInfo.activeProcessorCount
-
-    func add(page: Page) {
-        state[page.url] = page
-    }
-
-    nonisolated func crawl(url: URL) async throws {
-        let basePrefix = url.absoluteString
-        let queue = Queue()
-        await queue.enqueue(links: [url])
-
-        await withThrowingTaskGroup(of: Void.self) { group in
-            for _ in 0..<concurrencyLevel {
-                group.addTask {
-                    while let queuedURL = await queue.dequeue() {
-                        let page = try await URLSession.shared.page(from: queuedURL)
-                        await queue.finished(with: queuedURL)
-                        await self.add(page: page)
-                        var links: [URL] = []
-                        for link in page.links {
-                            if await !queue.exists(url: link) && link.absoluteString.hasPrefix(basePrefix) {
-                                links.append(link)
-                            }
-                        }
-                        await queue.enqueue(links: links)
-                    }
-                }
-            }
-        }
-        await queue.reset()
-    }
-}
-
 struct Page {
     let url: URL
     let title: String
     let links: [URL]
 }
 
-extension URL {
-    var sanitized: URL {
-        var result = absoluteString
-        if result.last == "/" {
-            result.removeLast()
+private func page(from url: URL) async throws -> Page {
+    let (data, _) = try await URLSession.shared.data(from: url)
+    let doc = try XMLDocument(data: data, options: .documentTidyHTML)
+    let title = try doc.nodes(forXPath: "//title").first?.stringValue ?? ""
+    let links: [URL] = try doc.nodes(forXPath: "//a[@href]").compactMap { node in
+        guard let node = node as? XMLElement, let href = node.attribute(forName: "href")?.stringValue else {
+            return nil
         }
-        if let idx = result.lastIndex(of: "#") {
-            result = String(result[..<idx])
-        }
-
-        return URL(string: result)!
+        guard let hrefURL = URL(string: href, relativeTo: url) else { return nil }
+        return sanitized(hrefURL)
     }
+
+    return Page(url: url, title: title, links: links)
 }
 
-extension URLSession {
-    func page(from url: URL) async throws -> Page {
-        let (data, _) = try await data(from: url)
-        let doc = try XMLDocument(data: data, options: .documentTidyHTML)
-        let title = try doc.nodes(forXPath: "//title").first?.stringValue ?? ""
-        let links: [URL] = try doc.nodes(forXPath: "//a[@href]").compactMap { node in
-            guard let node = node as? XMLElement, let href = node.attribute(forName: "href")?.stringValue else {
-                return nil
-            }
-            return URL(string: href, relativeTo: url)?.sanitized
-        }
-
-        return Page(url: url, title: title, links: links)
+private func sanitized(_ url: URL) -> URL {
+    var result = url.absoluteString
+    if result.last == "/" {
+        result.removeLast()
     }
+    if let idx = result.lastIndex(of: "#") {
+        result = String(result[..<idx])
+    }
+
+    return URL(string: result)!
 }
