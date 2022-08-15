@@ -55,6 +55,7 @@ private actor Queue {
     }
 
     func dequeue() async -> URL? {
+        guard !Task.isCancelled else { return nil }
         guard let url = waiting.popFirst() else {
             if !inProgress.isEmpty {
                 await withCheckedContinuation { cont in
